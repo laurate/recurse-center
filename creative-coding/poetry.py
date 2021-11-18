@@ -1,16 +1,19 @@
 ############################################################################################################################################################################
 
 import requests
+import random
 
 ############################################################################################################################################################################
 
 class bcolors:
-    ROSE = '\033[95m'
-    SOFT_BLUE = '\033[94m'
-    LIGHT_BLUE = '\033[96m'
+
+    LIGHT_RED = '\033[91m'
     LIGHT_GREEN = '\033[92m'
     LIGHT_YELLOW = '\033[93m'
-    LIGHT_RED = '\033[91m'
+    LIGHT_PURPLE = '\033[94m'
+    LIGHT_PINK = '\033[95m'
+    LIGHT_CYAN = '\033[96m'
+
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
     CURSIVE = '\033[3m'
@@ -21,21 +24,19 @@ def request_poem():
     '''
     Get a random poem and print it
     '''
-
     # Request a random poem and take the first one
     r = requests.get('https://www.poemist.com/api/v1/randompoems')
     poem = r.json()[0]
 
-    # Print poem beautifully
-    print(f'\n{bcolors.BOLD}{poem["title"]}{bcolors.ENDC}\n')
+    # Print poem in beautiful colors
+    colors = [bcolors.LIGHT_RED, bcolors.LIGHT_GREEN, bcolors.LIGHT_YELLOW, bcolors.LIGHT_PURPLE, bcolors.LIGHT_PINK, bcolors.LIGHT_CYAN]
+    random_color = random.choice(colors)
 
-    # TODO -> random pastel colors for poem
-    print(poem['content'])
-
+    print(f'\n{random_color}{bcolors.BOLD}{poem["title"]}{bcolors.ENDC}\n')
+    print(f'{random_color}{poem["content"]}{bcolors.ENDC}')
     print('')
-    print(f'\n{bcolors.CURSIVE} - By {poem["poet"]["name"]}\n')
+    print(f'\n{random_color}{bcolors.CURSIVE} - By {poem["poet"]["name"]}\n')
     print(f'{poem["poet"]["url"]}{bcolors.ENDC}\n')
-
 
 ############################################################################################################################################################################
 
