@@ -50,6 +50,13 @@ used_prompts = [
 
 def get_new_prompts() -> None:
 
+    # check if we used up all the prompts
+    used_all_abstract = all(prompt in used_prompts for prompt in abstract_prompts)
+    used_all_concrete = all(prompt in used_prompts for prompt in concrete_prompts)
+
+    assert not (used_all_abstract or used_all_concrete), f'Prompts are all used up (abstract: {used_all_abstract} / concrete: {used_all_concrete}), maybe come up with some new ones?'
+
+    # get new prompts
     new_abstract_prompt = False
     while new_abstract_prompt == False:
         abstract_prompt = random.choice(abstract_prompts)
