@@ -18,6 +18,7 @@ abstract_prompts = [
     'light and shadow',
     'puzzling',
     'tech support',
+    'very random',
 ]
 
 concrete_prompts = [
@@ -30,6 +31,9 @@ concrete_prompts = [
     'camera',
     'going to the movies',
     'roller coaster',
+    'noise',
+    'a warm summer night',
+    'rainy day',
 ]
 
 used_prompts = [
