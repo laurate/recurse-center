@@ -19,6 +19,8 @@ abstract_prompts = [
     'puzzling',
     'tech support',
     'very random',
+    'in full bloom',
+    'electricity',
 ]
 
 concrete_prompts = [
@@ -34,6 +36,11 @@ concrete_prompts = [
     'noise',
     'a warm summer night',
     'rainy day',
+    'public transport',
+    'pillars',
+    'drinking tea',
+    'my favorite programming language',
+    'picture books',
 ]
 
 used_prompts = [
@@ -48,6 +55,8 @@ used_prompts = [
     'sparkling',
     'today I learned',
     'tech support',
+    'lush green',
+    'rainy day',
 ]
 
 ############################################################################################################################################################################
