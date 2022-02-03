@@ -25,7 +25,7 @@ abstract_prompts = [
 
 concrete_prompts = [
     'animals',
-    'flashlight',
+    'the (flash)light at the end of the tunnel',
     'baggage',
     'fruit',
     'writing utensils',
@@ -57,6 +57,8 @@ used_prompts = [
     'tech support',
     'lush green',
     'rainy day',
+    'the (flash)light at the end of the tunnel',
+    'electricity',
 ]
 
 ############################################################################################################################################################################
