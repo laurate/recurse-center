@@ -59,6 +59,8 @@ used_prompts = [
     'rainy day',
     'the (flash)light at the end of the tunnel',
     'electricity',
+    'recursion',
+    '(never) graduation celebration'
 ]
 
 ############################################################################################################################################################################
